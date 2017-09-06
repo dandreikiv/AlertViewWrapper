@@ -74,6 +74,7 @@
 			isa = PBXGroup;
 			children = (
 				85C2F3B21F5FFD9300087179 /* AlertViewWrapper */,
+				85C2F44F1F607AD400087179 /* Supported files */,
 				85C2F3C71F5FFD9300087179 /* AlertViewWrapperTests */,
 				85C2F3B11F5FFD9300087179 /* Products */,
 			);
@@ -91,19 +92,12 @@
 		85C2F3B21F5FFD9300087179 /* AlertViewWrapper */ = {
 			isa = PBXGroup;
 			children = (
+				85C2F44E1F607AC000087179 /* View */,
+				85C2F44D1F607A9A00087179 /* Presenter */,
+				85C2F44C1F607A8B00087179 /* Interactor */,
 				85C2F3E11F60283200087179 /* Model */,
 				85C2F3B31F5FFD9300087179 /* AppDelegate.swift */,
-				85C2F3B51F5FFD9300087179 /* ViewController.swift */,
-				85C2F3D71F60208600087179 /* UserInteractor.swift */,
-				85C2F3DB1F6022FD00087179 /* UserInteractorInput.swift */,
-				85C2F3DD1F60230E00087179 /* UserInteractorOutput.swift */,
-				85C2F3D91F6020A500087179 /* UserPresenter.swift */,
-				85C2F3DF1F60255B00087179 /* UserViewInterface.swift */,
-				85C2F3E61F603B6200087179 /* UserModuleInterface.swift */,
 				85C2F3D51F6015E800087179 /* AlertWrapper.swift */,
-				85C2F3BA1F5FFD9300087179 /* Assets.xcassets */,
-				85C2F3BC1F5FFD9300087179 /* LaunchScreen.storyboard */,
-				85C2F3BF1F5FFD9300087179 /* Info.plist */,
 			);
 			path = AlertViewWrapper;
 			sourceTree = "<group>";
@@ -123,6 +117,45 @@
 				85C2F3E21F60284000087179 /* User.swift */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		85C2F44C1F607A8B00087179 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				85C2F3D71F60208600087179 /* UserInteractor.swift */,
+				85C2F3DB1F6022FD00087179 /* UserInteractorInput.swift */,
+				85C2F3DD1F60230E00087179 /* UserInteractorOutput.swift */,
+			);
+			name = Interactor;
+			sourceTree = "<group>";
+		};
+		85C2F44D1F607A9A00087179 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				85C2F3D91F6020A500087179 /* UserPresenter.swift */,
+				85C2F3E61F603B6200087179 /* UserModuleInterface.swift */,
+			);
+			name = Presenter;
+			sourceTree = "<group>";
+		};
+		85C2F44E1F607AC000087179 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				85C2F3B51F5FFD9300087179 /* ViewController.swift */,
+				85C2F3DF1F60255B00087179 /* UserViewInterface.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		85C2F44F1F607AD400087179 /* Supported files */ = {
+			isa = PBXGroup;
+			children = (
+				85C2F3BA1F5FFD9300087179 /* Assets.xcassets */,
+				85C2F3BC1F5FFD9300087179 /* LaunchScreen.storyboard */,
+				85C2F3BF1F5FFD9300087179 /* Info.plist */,
+			);
+			name = "Supported files";
+			path = AlertViewWrapper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
