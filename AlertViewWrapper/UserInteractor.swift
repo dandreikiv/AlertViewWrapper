@@ -8,11 +8,20 @@
 
 import Foundation
 
+/**
+ The Interactor is responsible for a use case implementation. 
+ The current use case is simple user insertion.
+ */
 class UserInteractor: UserInteractorInput {
 	
+	/**
+	 A reference to a presenter. Which is responsible for making connection
+	 between data storage events, which can be implemented in interactor, and 
+	 visual representation.
+	 */
 	var interactorOutput: UserInteractorOutput?
 	
-	// This mockes user storage...
+	// This is mocked user storage...
 	var users: [User]
 	
 	init() {
