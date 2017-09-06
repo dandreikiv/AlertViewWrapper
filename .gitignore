@@ -18,7 +18,6 @@ DerivedData/
 !default.mode2v3
 *.perspectivev3
 !default.perspectivev3
-xcuserdata/
 
 ## Other
 *.moved-aside
@@ -58,4 +57,8 @@ fastlane/Preview.html
 fastlane/screenshots
 fastlane/test_output
 
-# End of https://www.gitignore.io/api/swift
+### Xcode Patch ###
+!*.xcodeproj/xcshareddata/
+!*.xcworkspace/contents.xcworkspacedata
+*.xcodeproj/xcuserdata
+
