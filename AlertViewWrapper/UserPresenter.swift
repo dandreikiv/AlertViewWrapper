@@ -6,7 +6,7 @@
 //  Copyright © 2017 Dmytro Andreikiv. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
 class UserPresenter: UserModuleInterface, UserInteractorOutput {
 	
