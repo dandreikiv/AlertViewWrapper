@@ -58,6 +58,7 @@ fastlane/screenshots
 fastlane/test_output
 
 ### Xcode Patch ###
-*.xcworkspace/contents.xcworkspacedata
-*.xcodeproj/xcuserdata
+*.xcworkspace/contents.xcworkspacedata/
+*.xcodeproj/xcuserdata/
+*.xcodeproj/project.xcworkspace/xcuserdata/
 
