@@ -15,4 +15,18 @@ protocol AlertPresentable {
 }
 ```
 
-In order to make the **AlertWrapper** decoupled from a View, where message should be presented, it was desided to communicate with UI via AlertPresentable protocol. A ViewController object conforming to AlertPresentable protocol passes to AlertWrapper as dependency during intialization. 
+In order to make the **AlertWrapper** decoupled from a View, where message should be presented, it was desided to communicate with UI via AlertPresentable protocol. 
+```
+class AlertWrapper {
+    
+	private let alertPresenter: AlertPresentable?
+
+	init(controller: AlertPresentable?) {
+		self.alertPresenter = controller
+	}
+	
+	...
+}
+
+```
+A ViewController object conforming to AlertPresentable protocol passes to AlertWrapper as dependency during intialization. 
