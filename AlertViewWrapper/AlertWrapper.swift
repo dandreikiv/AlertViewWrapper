@@ -44,7 +44,7 @@ extension AlertAction {
 	}
 }
 
-final class AlertWrapper {
+class AlertWrapper {
 	
 	private let alertPresenter: AlertPresentable?
 	

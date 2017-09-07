@@ -8,14 +8,18 @@
 
 import UIKit
 
-class ViewController: UIViewController, UserViewInterface {
+class ViewController: UIViewController, UserViewInterface, UITableViewDataSource, UITableViewDelegate {
+	
+	private let cellIndentifier = "UserCellIdentifier"
 	
 	private var presenter: UserModuleInterface
 	private var list: [User]
+	private var tableView: UITableView
 	
 	init(presenter: UserModuleInterface) {
 		self.presenter = presenter
 		self.list = []
+		self.tableView = UITableView()
 		
 		super.init(nibName: nil, bundle: nil)
 	}
@@ -26,8 +30,8 @@ class ViewController: UIViewController, UserViewInterface {
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		view.backgroundColor = .white
-
+		
+		view.addSubview(tableView)
 		createUI()
 	}
 
@@ -38,11 +42,22 @@ class ViewController: UIViewController, UserViewInterface {
 	
 	private func createUI() {
 		createAddUserButton()
+		configureTableView()
 	}
 	
 	private func createAddUserButton() {
 		let addUser = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(createUser))
 		navigationItem.rightBarButtonItem = addUser;
+	}
+	
+	private func configureTableView() {
+		tableView.translatesAutoresizingMaskIntoConstraints = false
+		tableView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+		tableView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
+		tableView.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
+		tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+		tableView.dataSource = self
+		tableView.delegate = self
 	}
 	
 	@objc private func createUser() {
@@ -51,7 +66,24 @@ class ViewController: UIViewController, UserViewInterface {
 	
 	func reloadList(users: [User]) {
 		list = users
+		
 		// reload tableView... or any type of list representation...
+		tableView.reloadData()
+	}
+	
+	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+		return list.count
+	}
+	
+	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+		guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIndentifier) else {
+			return UITableViewCell(style: .default, reuseIdentifier: cellIndentifier)
+		}
+		return cell
+	}
+	
+	func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+		cell.textLabel?.text = list[indexPath.row].description
 	}
 }
 
