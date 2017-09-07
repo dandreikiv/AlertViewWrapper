@@ -18,7 +18,7 @@ protocol AlertPresentable {
 	 The method redirects an action of alert view creation and presentation to a
 	 view controller.
 	*/
-	func showAlert(title: String?, message: String?, actions:[UIAlertAction], completion: (() -> Void)? );
+	func showAlert(title: String?, message: String?, actions:[UIAlertAction], completion: (() -> Void)?)
 }
 
 /**
@@ -40,7 +40,7 @@ extension AlertAction {
 	func uiAlertAction(style: UIAlertActionStyle) -> UIAlertAction {
 		return UIAlertAction(title: title, style: style, handler: { alertAction in
 			self.action?()
-		});
+		})
 	}
 }
 
@@ -49,11 +49,11 @@ class AlertWrapper {
 	private let alertPresenter: AlertPresentable?
 	
 	init(controller: AlertPresentable?) {
-		self.alertPresenter = controller;
+		self.alertPresenter = controller
 	}
 	
 	func showAlert(title: String?, message: String?, actions:[UIAlertAction], completion: (() -> Void)? ) {
-		alertPresenter?.showAlert(title: title, message: message, actions: actions, completion: completion);
+		alertPresenter?.showAlert(title: title, message: message, actions: actions, completion: completion)
 	}
 }
 
