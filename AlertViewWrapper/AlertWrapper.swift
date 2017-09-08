@@ -21,6 +21,7 @@ protocol AlertPresentable {
 	func showAlert(title: String?, message: String?, actions:[UIAlertAction], completion: (() -> Void)?)
 }
 
+
 /**
  The structure is a wrapper for an UIAlertView and is being used in the Presenter.
  As according to VIPER architecture the presenter should contain only plain objects 
