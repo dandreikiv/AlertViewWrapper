@@ -1,4 +1,4 @@
 language: swift
-  xcode_project: AlertViewWrapper.xcodeproj # path to your xcodeproj folder
-  xcode_scheme: AlertViewWrapperTests
-  osx_image: xcode8.3
+xcode_project: AlertViewWrapper.xcodeproj
+xcode_scheme: AlertViewWrapperTests
+osx_image: xcode8.3
