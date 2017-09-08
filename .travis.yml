@@ -1,4 +1,4 @@
-language: swift
+language: objective-c
 xcode_project: AlertViewWrapper.xcodeproj
 xcode_scheme: AlertViewWrapperTests
 osx_image: xcode8.3
