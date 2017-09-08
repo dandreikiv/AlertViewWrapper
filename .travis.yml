@@ -1,0 +1,5 @@
+language": "swift",
+  "xcode_project": "AlertViewWrapper.xcodeproj",
+  "osx_image": "xcode8.3",
+  "os": "osx"
+}
