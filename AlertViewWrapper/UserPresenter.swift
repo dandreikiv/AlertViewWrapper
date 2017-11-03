@@ -10,8 +10,9 @@ import Foundation
 
 class UserPresenter: UserModuleInterface, UserInteractorOutput {
 	
+	weak var userView: UserViewInterface?
+	
 	var userInteractor: UserInteractorInput?
-	var userView: UserViewInterface?
 	var alertWrapper: AlertWrapper?
 	
 	func createRandomUser() {

@@ -12,7 +12,7 @@ import UIKit
  The protocol to which a view controller should conform, in order to be abot to 
  present an alert view via AlertWrapper.
  */
-protocol AlertPresentable {
+protocol AlertPresentable: class {
 	
 	/**
 	 The method redirects an action of alert view creation and presentation to a
@@ -47,7 +47,7 @@ extension AlertAction {
 
 class AlertWrapper {
 	
-	private let alertPresenter: AlertPresentable?
+	private weak var alertPresenter: AlertPresentable?
 	
 	init(controller: AlertPresentable?) {
 		self.alertPresenter = controller

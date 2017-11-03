@@ -13,7 +13,7 @@ import Foundation
  from Presenter. The Interactor delivers data to UI via Presenter by these 
  methods.
  */
-protocol UserInteractorOutput {
+protocol UserInteractorOutput: class {
 	
 	/**
 	 The Interactor invokes this method after a user has been added to a storage.

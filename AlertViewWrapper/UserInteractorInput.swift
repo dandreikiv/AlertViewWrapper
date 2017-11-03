@@ -12,7 +12,7 @@ import Foundation
  The protocol defines number of methods which should be implemented by object, 
  which behaves as interactor.
  */
-protocol UserInteractorInput {
+protocol UserInteractorInput: class {
 	
 	/**
 	 Stores given user into data storage, which is accessible via interactor.

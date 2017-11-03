@@ -12,7 +12,7 @@ import Foundation
  The protocol defines number of methods by which Presenter communicates back
  to a view.
  */
-protocol UserViewInterface {
+protocol UserViewInterface: class {
 	
 	/**
 	 Notifies a view that a list of users should be updated with given array 
